@@ -396,3 +396,165 @@ for x in range(1,n+1):
     if x%2 == 0:
         print(f'{x}^2 = {x**2}')
 
+#1074 - Par ou Ímpar
+n = int(input())
+
+lista = []
+for x in range(n):
+    nm = int(input())
+    lista.append(nm)
+    
+for i in lista:
+    if i < 0 and i%2 == 0:
+        print('EVEN NEGATIVE')
+    elif i > 0 and i%2 == 0:
+        print('EVEN POSITIVE')
+    elif i < 0 and i%2 != 0:
+        print('ODD NEGATIVE')
+    elif i > 0 and i%2 != 0:
+        print('ODD POSITIVE')
+    else:
+        print('NULL')
+        
+#1075 - Resto 2
+n = int(input())
+for k in range(10000):
+    if k%n == 2:
+        print(k)
+
+#1078 - Tabuada
+n = int(input())
+for x in range(1,11):
+    print(f'{x} x {n} = {x*n}')
+
+#1079 - Médias Ponderadas
+n = int(input())
+for i in range(n):
+    p, s, t = map(float, input().split())
+    print(f'{(p*2 + s*3 + t*5)/10:.1f}')
+
+#1080 - Maior e Posição
+l = []
+for x in range(100):
+    n = int(input())
+    l.append(n)
+    
+print(max(l))
+print(l.index(max(l))+1)
+
+#1095 - Sequência IJ 1
+x = 1
+y = 60
+cont = 1
+while cont < 14:
+    print(f'I={x} J={y}')
+    x = x + 3
+    y = y - 5
+    cont += 1
+
+#1096 - Sequência IJ 2
+for x in range(1,10, 2):
+    i = 7
+    while i > 4:
+        print(f'I={x} J={i}')
+        i = i - 1 
+
+#1097 - Sequência IJ 3
+i = 1
+j = 7
+while i <= 9:
+    print(f'I={i} J={j}')
+    print(f'I={i} J={j-1}')
+    print(f'I={i} J={j-2}')
+    i = i + 2
+    j = j + 2
+    
+#1099 - Soma de Ímpares Consecutivos II
+teste = int(input())
+
+lista_X = []
+lista_Y = []
+for x in range(teste):
+    x, y = map(int, input().split())
+    lista_X.append(x)
+    lista_Y.append(y)
+
+
+for x in range(len(lista_X)):
+    soma = 0
+    if lista_X[x] == lista_Y[x]:
+        soma = soma
+    elif lista_Y[x] > lista_X[x]:
+        for i in range(lista_X[x] + 1, lista_Y[x]):
+            if i%2 != 0:
+                soma = soma + i
+    else:
+        for i in range(lista_Y[x] + 1, lista_X[x]):
+            if i%2 != 0:
+                soma = soma + i
+    print(soma)
+        
+#1113 - Crescente e Decrescente 
+while True:
+    X, Y = map(int, input().split())
+    if X == Y:
+        break
+    if X < Y:
+        print('Crescente')
+    else:
+        print('Decrescente')
+
+#1114 - Senha Fixa 
+while True:
+    senha = int(input())
+    if senha == 2002:
+        break
+    else:
+        print('Senha Invalida')
+print('Acesso Permitido')
+
+#1115 - Quadrante 
+l = []
+while True:
+    X, Y = map(int, input().split())
+    if X == 0 or Y == 0:
+        break
+    if X > 0 and Y > 0:
+        valor = 'primeiro'
+        l.append(valor)
+    elif X < 0 and Y > 0:
+        valor = 'segundo'
+        l.append(valor)
+    elif X < 0 and Y < 0:
+        valor = 'terceiro'
+        l.append(valor)
+    elif X  > 0  and Y < 0:
+        valor = 'quarto'
+        l.append(valor)
+
+for x in l:
+    print(x)
+
+#1134 - Tipo de Combustível
+l = []
+while True:
+    n = int(input())
+    if n == 4:
+        break
+    else:
+        l.append(n)
+print('MUITO OBRIGADO')
+print(f'Alcool: {l.count(1)}')
+print(f'Gasolina: {l.count(2)}')
+print(f'Diesel: {l.count(3)}')
+
+#1143 - Quadrado e ao Cubo
+n = int(input())
+for i in range(1, n+1):
+    print(i, i**2, i**3)
+    
+#1144 - Sequência Lógica
+n = int(input())
+for i in range(1, n+1):
+    print(i, i**2, i**3)
+    print(i, (i**2) + 1, (i**3) + 1)
